@@ -7,3 +7,13 @@ body {
 a:hover {
     cursor: url("./assets/images/mouse-f2.png"), auto;
 }
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.btn-secondary {
+    background-color: dimgray!important;
+}

@@ -13,3 +13,7 @@ tbody, td, tfoot, th, thead, tr {
     color: #646464!important;
     background-color: #f2f2f2!important;
 }
+
+.page-item.active .page-link {
+    background-color: dimgray!important;
+}
