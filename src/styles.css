@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+    cursor: url("./assets/images/mouse-f1.png"), auto;
+}
+
+a:hover {
+    cursor: url("./assets/images/mouse-f2.png"), auto;
+}

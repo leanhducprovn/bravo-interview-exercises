@@ -1,0 +1,15 @@
+tbody, td, tfoot, th, thead, tr {
+    border-width: thin !important;
+}
+
+.table {
+    display: block;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.alert-info {
+    color: #646464!important;
+    background-color: #f2f2f2!important;
+}
