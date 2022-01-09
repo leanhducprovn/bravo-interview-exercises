@@ -27,11 +27,30 @@ export class ProductComponent implements OnInit {
         _SelectKey__wibkaw: string
     }[] = product;
 
+    // Phân trang
     check = true;
     perPage = 20;
     previous = 1;
     next = 1;
     page = 1;
+
+    // Thêm sản phẩm
+    newSTT = '';
+    newId = '';
+    newParentId = '';
+    newIsGroup = '';
+    newName = '';
+    newItemTypeName = '';
+    newCode = '';
+    newUnit = '';
+    newItemGroupCode = '';
+    newBranchCode = '';
+    newIsActive = '';
+    newCreatedBy = '';
+    newCreatedAt = '';
+    newModifiedBy = '';
+    newModifiedAt = '';
+    new_SelectKey__wibkaw = '';
 
     constructor(private route: ActivatedRoute,) { 
         this.route.queryParams.subscribe(params => {
@@ -44,6 +63,45 @@ export class ProductComponent implements OnInit {
 
     ngOnInit(): void {
 
+    }
+
+    formAddProduct = '';
+
+    // Thêm sản phẩm
+    addProduct() {
+        this.listProduct.unshift({
+            Id: this.newId,
+            ParentId: this.newParentId,
+            IsGroup: this.newIsGroup,
+            Name: this.newName,
+            ItemTypeName: this.newItemTypeName,
+            Code: this.newCode,
+            Unit: this.newUnit,
+            ItemGroupCode: this.newItemGroupCode,
+            BranchCode: this.newBranchCode,
+            IsActive: this.newIsActive,
+            CreatedBy: this.newCreatedBy,
+            CreatedAt: this.newCreatedAt,
+            ModifiedBy: this.newModifiedBy,
+            ModifiedAt: this.newModifiedAt,
+            _SelectKey__wibkaw: this.new_SelectKey__wibkaw
+        });
+        // Clear form
+        this.newId = '';
+        this.newParentId = '';
+        this.newIsGroup = '';
+        this.newName = '';
+        this.newItemTypeName = '';
+        this.newCode = '';
+        this.newUnit = '';
+        this.newItemGroupCode = '';
+        this.newBranchCode = '';
+        this.newIsActive = '';
+        this.newCreatedBy = '';
+        this.newCreatedAt = '';
+        this.newModifiedBy = '';
+        this.newModifiedAt = '';
+        this.new_SelectKey__wibkaw = '';
     }
 
 }

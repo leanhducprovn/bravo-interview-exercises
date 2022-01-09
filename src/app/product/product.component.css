@@ -15,5 +15,18 @@ tbody, td, tfoot, th, thead, tr {
 }
 
 .page-item.active .page-link {
-    background-color: dimgray!important;
+    background-color: #00b74a!important;
+}
+
+.btn {
+    margin-bottom: 40px;
+}
+
+label {
+    font-weight: 400;
+    background: linear-gradient(180deg, #686868, #000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
 }

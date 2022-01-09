@@ -1,7 +1,91 @@
 <div class="container">
     <div class="row">
         <div class="mt-4">
-            <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <!-- Thêm mới -->
+            <form (submit)="addProduct()" #formAddProduct="ngForm">
+                <div class="row">
+                    <div class="col form-group">
+                        <label>ID:</label>
+                        <p><input [(ngModel)]="newId" type="text" class="form-control" name="ID" placeholder="12345" value="" required /></p>
+                    </div>
+                    <div class="col form-group">
+                        <label>ParentId:</label>
+                        <p><input [(ngModel)]="newParentId" type="text" class="form-control" name="ParentId" placeholder="1234" value="" /></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-group">
+                        <label>IsGroup:</label>
+                        <p>
+                            <input [(ngModel)]="newIsGroup" type="radio" name="IsGroup" value="true" /> True
+                            <input [(ngModel)]="newIsGroup" type="radio" name="IsGroup" value="false" /> False
+                        </p>
+                    </div>
+                    <div class="col form-group">
+                        <label>IsActive:</label>
+                        <p>
+                            <input [(ngModel)]="newIsActive" type="radio" name="IsActive" value="true" /> True
+                            <input [(ngModel)]="newIsActive" type="radio" name="IsActive" value="false" /> False
+                        </p>
+                    </div>
+                    <div class="col form-group">
+                        <label>_SelectKey__wibkaw:</label>
+                        <p>
+                            <input [(ngModel)]="new_SelectKey__wibkaw" type="radio" name="_SelectKey__wibkaw" value="true" /> True
+                            <input [(ngModel)]="new_SelectKey__wibkaw" type="radio" name="_SelectKey__wibkaw" value="false" /> False
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-group">
+                        <label>Name:</label>
+                        <p><input [(ngModel)]="newName" class="form-control" type="text" name="Name" value="" placeholder="Versace Eros For Men" /></p>
+                    </div>
+                    <div class="col form-group">
+                        <label>ItemTypeName:</label>
+                        <p><input [(ngModel)]="newItemTypeName" class="form-control" type="text" name="ItemTypeName" value="" placeholder="Vật tư hàng hóa" /></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-group">
+                        <label>Code:</label>
+                        <p><input [(ngModel)]="newCode" class="form-control" type="text" name="Code" value="" placeholder="001" /></p>
+                    </div>
+                    <div class="col form-group">
+                        <label>Unit:</label>
+                        <p><input [(ngModel)]="newUnit" class="form-control" type="text" name="Unit" value="" placeholder="Lọ" /></p>
+                    </div>
+                    <div class="col form-group">
+                        <label>ItemGroupCode:</label>
+                        <p><input [(ngModel)]="newItemGroupCode" class="form-control" type="text" name="ItemGroupCode" value="" placeholder="ABC" /></p>
+                    </div>
+                    <div class="col form-group">
+                        <label>BranchCode:</label>
+                        <p><input [(ngModel)]="newBranchCode" class="form-control" type="text" name="BranchCode" value="" placeholder="CDE" /></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-group">
+                        <label>CreatedBy:</label>
+                        <p><input [(ngModel)]="newCreatedBy" class="form-control" type="text" name="CreatedBy" value="" placeholder="100" /></p>
+                    </div>
+                    <div class="col form-group">
+                        <label>CreatedAt:</label>
+                        <p><input [(ngModel)]="newCreatedAt" class="form-control" type="text" name="CreatedAt" value="" placeholder="2021-01-09T19:00:00.000Z" /></p>
+                    </div>
+                    <div class="col form-group">
+                        <label>ModifiedBy:</label>
+                        <p><input [(ngModel)]="newModifiedBy" class="form-control" type="text" name="ModifiedBy" value="" placeholder="10" /></p>
+                    </div>
+                    <div class="col form-group">
+                        <label>ModifiedAt:</label>
+                        <p><input [(ngModel)]="newModifiedAt" class="form-control" type="text" name="ModifiedAt" value="" placeholder="2021-01-09T19:00:00.000Z" /></p>
+                    </div>
+                </div>
+                <button [disabled]="formAddProduct.invalid" onclick="successAdd()" type="submit" class="btn btn-success float-end">Thêm mới</button>
+            </form>
+            <!-- Thêm mới -->
+            <div class="mt-5 alert alert-info alert-dismissible fade show" role="alert">
                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
                 Dưới đây là danh sách sản phẩm!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
