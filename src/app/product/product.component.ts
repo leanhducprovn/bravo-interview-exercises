@@ -52,7 +52,7 @@ export class ProductComponent implements OnInit {
     newModifiedAt = '';
     new_SelectKey__wibkaw = '';
 
-    constructor(private route: ActivatedRoute,) { 
+    constructor(private route: ActivatedRoute) { 
         this.route.queryParams.subscribe(params => {
             this.page = params['page'] ? params['page'] : 1;
             this.previous = this.page - 1;
