@@ -241,3 +241,8 @@ div.table-responsive>div.dataTables_wrapper>div.row>div[class^=col-]:first-child
 div.table-responsive>div.dataTables_wrapper>div.row>div[class^=col-]:last-child {
     padding-right: 0;
 }
+
+.page-item.active .page-link {
+    background-color: #00b74a !important;
+    box-shadow: unset !important;
+}
