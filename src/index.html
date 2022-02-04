@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Product</title>
+        <title>Bravo Interview Exercises</title>
         <base href="/">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -25,38 +25,8 @@
             <app-root></app-root>
         </div>
 
-        <!-- Back to top button -->
-        <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top">
-            <i class="fas fa-arrow-up"></i>
-        </button>
+        
 
-        <script>
-            //Get the button
-            let mybutton = document.getElementById("btn-back-to-top");
-
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function () {
-                scrollFunction();
-            };
-
-            function scrollFunction() {
-                if (
-                    document.body.scrollTop > 20 ||
-                    document.documentElement.scrollTop > 20
-                ) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
-                }
-            }
-            // When the user clicks on the button, scroll to the top of the document
-            mybutton.addEventListener("click", backToTop);
-
-            function backToTop() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
         <!-- comfirm add -->
         <script>
             function successAdd() {
@@ -112,6 +82,8 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
         <!-- Sweetalert2 -->
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- Back to top -->
+        <script src="../../assets/js/backTop/main.js"></script>
             
     </body>
 </html>

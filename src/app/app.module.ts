@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { ProductComponent } from './product/product.component';
 import { AddComponent } from './add/add.component';
+import { BacktopComponent } from './backtop/backtop.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AddComponent } from './add/add.component';
     FooterComponent,
     BodyComponent,
     ProductComponent,
-    AddComponent
+    AddComponent,
+    BacktopComponent
   ],
   imports: [
     BrowserModule,
