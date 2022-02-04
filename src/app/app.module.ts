@@ -10,6 +10,7 @@ import { BodyComponent } from './body/body.component';
 import { ProductComponent } from './product/product.component';
 import { AddComponent } from './add/add.component';
 import { BacktopComponent } from './backtop/backtop.component';
+import { ToolsComponent } from './tools/tools.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BacktopComponent } from './backtop/backtop.component';
     BodyComponent,
     ProductComponent,
     AddComponent,
-    BacktopComponent
+    BacktopComponent,
+    ToolsComponent
   ],
   imports: [
     BrowserModule,
