@@ -27,13 +27,6 @@ export class ProductComponent implements OnInit {
         _SelectKey__wibkaw: string
     }[] = product;
 
-    // Phân trang
-    check = true;
-    perPage = 20;
-    previous = 1;
-    next = 1;
-    page = 1;
-
     // Thêm sản phẩm
     newSTT = '';
     newId = '';
@@ -52,13 +45,8 @@ export class ProductComponent implements OnInit {
     newModifiedAt = '';
     new_SelectKey__wibkaw = '';
 
-    constructor(private route: ActivatedRoute) { 
-        this.route.queryParams.subscribe(params => {
-            this.page = params['page'] ? params['page'] : 1;
-            this.previous = this.page - 1;
-            this.next = this.page - (-1);
-            this.check = this.page == 1 ? true : false;
-        });
+    constructor() { 
+
     }
 
     ngOnInit(): void {
