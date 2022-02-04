@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import product from '../../assets/data/product.json';
-import { ActivatedRoute } from '@angular/router';
-
 @Component({
     selector: 'app-product',
     templateUrl: './product.component.html',
