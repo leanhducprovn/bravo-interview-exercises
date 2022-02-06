@@ -23,48 +23,6 @@
     </head>
     <body>  
         <app-root></app-root>
-        <!-- comfirm add -->
-        <script>
-            function successAdd() {
-                Swal.fire(
-                    'Thành công',
-                    'Sản phẩm đã được thêm vào đầu bảng!',
-                    'success'
-                )
-            }
-        </script>
-        <!-- comfirm edit -->
-        <script>
-            function successEdit() {
-                Swal.fire(
-                    'Success',
-                    'You have successfully fixed it!',
-                    'success'
-                )
-            }
-        </script>
-        <!-- comfirm delete -->
-        <script>
-            function comfirmDelete() {
-                Swal.fire({
-                    title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
-                            'success'
-                        )
-                    }
-                })
-            }
-        </script>
         <!-- jquery -->
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <!-- Table -->
@@ -80,6 +38,8 @@
         <!-- Back to top -->
         <script src="../../assets/js/backTop/main.js"></script> 
         <!-- Tools -->
-        <script src="../../assets/js/tools/tooltip.js"></script> 
+        <script src="../../assets/js/tools/tooltip.js"></script>
+        <!-- Confirm -->
+        <script src="../../assets/js/confirm/main.js"></script>
     </body>
 </html>
