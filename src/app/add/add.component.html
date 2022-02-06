@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label>ParentId:</label>
-                        <p><input type="text" class="form-control" formControlName="ParentId" placeholder="1234" value="" /></p>
+                        <p><input type="text" class="form-control" formControlName="ParentId" placeholder="1234" value="" required /></p>
                         <div *ngIf="ParentId.invalid && (ParentId.dirty || ParentId.touched)" class="alert alert-danger" role="alert">
                             <div *ngIf="ParentId.errors?.['required']">
                                 ParentId không được bỏ trống.
@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label>Name:</label>
-                        <p><input class="form-control" type="text" formControlName="Name" value="" placeholder="Versace Eros For Men"/></p>
+                        <p><input class="form-control" type="text" formControlName="Name" value="" placeholder="Versace Eros For Men" required /></p>
                         <div *ngIf="Name.invalid && (Name.dirty || Name.touched)" class="alert alert-danger" role="alert">
                             <div *ngIf="Name.errors?.['required']">
                                 Tên không được bỏ trống.
@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label>ItemTypeName:</label>
-                        <p><input class="form-control" type="text" formControlName="ItemTypeName" value="" placeholder="Vật tư hàng hóa" /></p>
+                        <p><input class="form-control" type="text" formControlName="ItemTypeName" value="" placeholder="Vật tư hàng hóa" required /></p>
                         <div *ngIf="ItemTypeName.invalid && (ItemTypeName.dirty || ItemTypeName.touched)" class="alert alert-danger" role="alert">
                             <div *ngIf="ItemTypeName.errors?.['required']">
                                 ItemTypeName không được bỏ trống.
@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label>Code:</label>
-                        <p><input class="form-control" type="text" formControlName="Code" value="" placeholder="001" /></p>
+                        <p><input class="form-control" type="text" formControlName="Code" value="" placeholder="001" required /></p>
                         <div *ngIf="Code.invalid && (Code.dirty || Code.touched)" class="alert alert-danger" role="alert">
                             <div *ngIf="Code.errors?.['required']">
                                 Code không được bỏ trống.
@@ -63,7 +63,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label>Unit:</label>
-                        <p><input class="form-control" type="text" formControlName="Unit" value="" placeholder="Lọ" /></p>
+                        <p><input class="form-control" type="text" formControlName="Unit" value="" placeholder="Lọ" required /></p>
                         <div *ngIf="Unit.invalid && (Unit.dirty || Unit.touched)" class="alert alert-danger" role="alert">
                             <div *ngIf="Unit.errors?.['required']">
                                 Unit không được bỏ trống.
