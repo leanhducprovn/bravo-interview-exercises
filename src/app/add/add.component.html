@@ -1,35 +1,43 @@
 <div class="container">
     <div class="row">
         <div class="mt-4">
-            <form>
+            <form (ngSubmit)="onSubmit()" [formGroup]="addProduct">
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label>ID:</label>
-                        <p><input type="text" class="form-control" name="ID" placeholder="12345" value="" required /></p>
+                        <p><input type="text" class="form-control" formControlName="Id" placeholder="12345" value="" required /></p>
                     </div>
                     <div class="form-group col-md-6">
                         <label>ParentId:</label>
-                        <p><input type="text" class="form-control" name="ParentId" placeholder="1234" value="" /></p>
+                        <p><input type="text" class="form-control" formControlName="ParentId" placeholder="1234" value="" /></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label>Name:</label>
-                        <p><input class="form-control" type="text" name="Name" value="" placeholder="Versace Eros For Men" /></p>
+                        <p><input class="form-control" type="text" formControlName="Name" value="" placeholder="Versace Eros For Men"/></p>
+                        <div *ngIf="Name.invalid && (Name.dirty || Name.touched)" class="alert alert-danger">
+                            <div *ngIf="Name.errors?.['required']">
+                                Tên không được bỏ trống.
+                            </div>
+                            <div *ngIf="Name.errors?.['minlength']">
+                                Tên phải có ít nhất 4 ký tự.
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group col-md-6">
                         <label>ItemTypeName:</label>
-                        <p><input class="form-control" type="text" name="ItemTypeName" value="" placeholder="Vật tư hàng hóa" /></p>
+                        <p><input class="form-control" type="text" formControlName="ItemTypeName" value="" placeholder="Vật tư hàng hóa" /></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label>Code:</label>
-                        <p><input class="form-control" type="text" name="Code" value="" placeholder="001" /></p>
+                        <p><input class="form-control" type="text" formControlName="Code" value="" placeholder="001" /></p>
                     </div>
                     <div class="form-group col-md-6">
                         <label>Unit:</label>
-                        <p><input class="form-control" type="text" name="Unit" value="" placeholder="Lọ" /></p>
+                        <p><input class="form-control" type="text" formControlName="Unit" value="" placeholder="Lọ" /></p>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success float-end">Thêm mới</button>
