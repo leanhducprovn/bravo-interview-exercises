@@ -31,6 +31,11 @@ export class AddComponent implements OnInit {
 
 	onSubmit() {
 		console.warn(this.addProduct.value);
+		this.addProduct.reset();
+	}
+
+	onReset() {
+		this.addProduct.reset();
 	}
 
 }
