@@ -1,5 +1,6 @@
 <app-add [hidden]="clickAdd"></app-add>
 <!-- Back to top button -->
-<button (click)="clickAdd = !clickAdd" type="button" class="btn btn-success btn-floating btn-lg" id="tools" data-bs-toggle="tooltip" data-bs-placement="right" title="Add a product">
-    <i class="fas fa-plus"></i>
+<button (click)="clickAdd = !clickAdd" type="button" class="btn btn-success btn-floating btn-lg" id="tools"
+    data-bs-toggle="tooltip" data-bs-placement="right" title="Add a product">
+    <i [class]="clickAdd ? 'fas fa-plus' : 'fas fa-times'"></i>
 </button>
