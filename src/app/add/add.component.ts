@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Component, OnInit} from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
 	selector: 'app-add',
@@ -29,12 +29,12 @@ export class AddComponent implements OnInit {
 
 	ngOnInit() { }
 
-	onSubmit() {
-		console.warn(this.addProduct.value);
+	onReset() {
 		this.addProduct.reset();
 	}
 
-	onReset() {
+	onSubmit() {
+		console.warn(this.addProduct.value);
 		this.addProduct.reset();
 	}
 

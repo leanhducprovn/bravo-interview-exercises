@@ -72,8 +72,8 @@
                     </div>
                 </div>
                 <div class='d-grid gap-2 d-md-flex justify-content-md-end'>
-                    <button onclick="onReset()" class="btn btn-btn btn-light"><i class="fas fa-redo-alt"></i> Làm mới</button>
-                    <button [disabled]="addProduct.invalid" type="submit" class="btn btn-success"><i class="fas fa-cart-plus"></i> Thêm mới</button>
+                    <button (click)="onReset()" class="btn btn-btn btn-light"><i class="fas fa-redo-alt"></i> Làm mới</button>
+                    <button onclick="success(`Thành công`, `Sản phẩm đã được thêm vào thành công!`)" [disabled]="addProduct.invalid" type="submit" class="btn btn-success"><i class="fas fa-cart-plus"></i> Thêm mới</button>
                 </div>
             </form>
         </div>
