@@ -8,12 +8,12 @@ import product from '../../assets/data/product.json';
 export class ProductComponent implements OnInit {
     
     listProduct: {
-        Id: string,
-        ParentId: string,
-        Name: string,
-        ItemTypeName: string,
-        Code: string,
-        Unit: string,
+        Id: any,
+        ParentId: any,
+        Name: any,
+        ItemTypeName: any,
+        Code: any,
+        Unit: any,
     }[] = product;
 
     constructor() { 

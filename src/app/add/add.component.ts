@@ -1,5 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ProductComponent } from '../product/product.component';
 
 @Component({
 	selector: 'app-add',
@@ -8,6 +9,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 
 export class AddComponent implements OnInit {
+
+	@ViewChild(ProductComponent)
+	product!: ProductComponent;
 
 	addProduct = this.fb.group({
 		Id: ['', [Validators.required, Validators.minLength(5)]],
@@ -35,6 +39,14 @@ export class AddComponent implements OnInit {
 
 	onSubmit() {
 		console.warn(this.addProduct.value);
+		this.product.listProduct.unshift({
+			Id: this.Id,
+			ParentId: this.ParentId,
+			Name: this.Name,
+			ItemTypeName: this.ItemTypeName,
+			Code: this.Code,
+			Unit: this.Unit,
+		})
 		this.addProduct.reset();
 	}
 
