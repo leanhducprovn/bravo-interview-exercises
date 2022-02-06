@@ -25,13 +25,9 @@ export class AddComponent implements OnInit {
 	get Code() { return this.addProduct.get('Code')!; }
 	get Unit() { return this.addProduct.get('Unit')!; }
 
-  	constructor(private fb: FormBuilder) {
+  	constructor(private fb: FormBuilder) { }
 
-	}
-
-	ngOnInit() {
-
-	}
+	ngOnInit() { }
 
 	onSubmit() {
 		console.warn(this.addProduct.value);
