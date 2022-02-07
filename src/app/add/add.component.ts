@@ -39,14 +39,14 @@ export class AddComponent implements OnInit {
 
 	onSubmit() {
 		console.warn(this.addProduct.value);
-		this.product.listProduct.unshift({
-			Id: this.Id,
-			ParentId: this.ParentId,
-			Name: this.Name,
-			ItemTypeName: this.ItemTypeName,
-			Code: this.Code,
-			Unit: this.Unit,
-		})
+		// this.product.listProduct.unshift({
+		// 	Id: this.Id,
+		// 	ParentId: this.ParentId,
+		// 	Name: this.Name,
+		// 	ItemTypeName: this.ItemTypeName,
+		// 	Code: this.Code,
+		// 	Unit: this.Unit,
+		// })
 		this.addProduct.reset();
 	}
 
