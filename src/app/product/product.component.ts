@@ -16,6 +16,8 @@ export class ProductComponent implements OnInit {
         Unit: any,
     }[] = product;
 
+    test =  "test";
+
     constructor() { 
 
     }

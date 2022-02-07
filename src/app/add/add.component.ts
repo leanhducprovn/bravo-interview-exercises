@@ -51,4 +51,8 @@ export class AddComponent implements OnInit {
 		this.addProduct.reset();
 	}
 
+	ngAfterViewInit() {
+		console.log(this.product.test)
+	}
+
 }
