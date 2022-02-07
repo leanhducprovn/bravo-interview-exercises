@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild} from '@angular/core';
+import { Component, AfterViewInit, ViewChild} from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ProductComponent } from '../product/product.component';
 
@@ -8,7 +8,7 @@ import { ProductComponent } from '../product/product.component';
 	styleUrls: ['./add.component.css'],
 })
 
-export class AddComponent implements OnInit {
+export class AddComponent implements AfterViewInit {
 
 	@ViewChild(ProductComponent)
 	product!: ProductComponent;
@@ -31,15 +31,13 @@ export class AddComponent implements OnInit {
 
   	constructor(private fb: FormBuilder) { }
 
-	ngOnInit() { }
-
 	onReset() {
 		this.addProduct.reset();
 	}
 
 	onSubmit() {
 		console.warn(this.addProduct.value);
-		console.log(this.Id.value)
+		console.log(this.product)
 		this.product.listProduct.unshift({
 			Id: this.Id.value,
 			ParentId: this.ParentId.value,
@@ -52,7 +50,7 @@ export class AddComponent implements OnInit {
 	}
 
 	ngAfterViewInit() {
-		console.log(this.product.test)
+		console.log(this.product)
 	}
 
 }
