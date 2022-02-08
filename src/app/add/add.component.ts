@@ -50,6 +50,7 @@ export class AddComponent implements AfterViewInit {
 	}
 
 	ngAfterViewInit() {
+		// test
 		console.log(this.product)
 	}
 
