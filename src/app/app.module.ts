@@ -11,6 +11,7 @@ import { ProductComponent } from './product/product.component';
 import { AddComponent } from './add/add.component';
 import { BacktopComponent } from './backtop/backtop.component';
 import { ToolsComponent } from './tools/tools.component';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { ToolsComponent } from './tools/tools.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    ProductService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
