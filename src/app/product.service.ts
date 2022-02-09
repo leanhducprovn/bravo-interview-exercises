@@ -1,9 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ViewChild } from '@angular/core';
+import { ProductComponent } from './product/product.component';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root',
 })
 export class ProductService {
+	@ViewChild(ProductComponent)
+	product = ProductComponent
+	getProduct() {
+		return this.product;
+	}
 
-  constructor() { }
+	constructor() { }
 }

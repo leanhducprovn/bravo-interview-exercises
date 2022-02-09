@@ -1,6 +1,6 @@
-import { Component, AfterViewInit, ViewChild} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ProductComponent } from '../product/product.component';
+import { ProductService } from '../product.service'
 
 @Component({
 	selector: 'app-add',
@@ -8,10 +8,7 @@ import { ProductComponent } from '../product/product.component';
 	styleUrls: ['./add.component.css'],
 })
 
-export class AddComponent implements AfterViewInit {
-
-	@ViewChild(ProductComponent)
-	product!: ProductComponent;
+export class AddComponent implements OnInit {
 
 	addProduct = this.fb.group({
 		Id: ['', [Validators.required, Validators.minLength(5)]],
@@ -29,7 +26,7 @@ export class AddComponent implements AfterViewInit {
 	get Code() { return this.addProduct.get('Code')!; }
 	get Unit() { return this.addProduct.get('Unit')!; }
 
-  	constructor(private fb: FormBuilder) { }
+  	constructor(private fb: FormBuilder, private productService: ProductService) { }
 
 	onReset() {
 		this.addProduct.reset();
@@ -37,21 +34,12 @@ export class AddComponent implements AfterViewInit {
 
 	onSubmit() {
 		console.warn(this.addProduct.value);
-		console.log(this.product)
-		this.product.listProduct.unshift({
-			Id: this.Id.value,
-			ParentId: this.ParentId.value,
-			Name: this.Name.value,
-			ItemTypeName: this.ItemTypeName.value,
-			Code: this.Code.value,
-			Unit: this.Unit.value,
-		})
+		console.log(this.productService.getProduct())
 		this.addProduct.reset();
 	}
 
-	ngAfterViewInit() {
-		// test
-		console.log(this.product)
+	ngOnInit(): void {
+		
 	}
 
 }
