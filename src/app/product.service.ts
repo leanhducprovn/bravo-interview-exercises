@@ -5,7 +5,7 @@ import product from '../assets/data/product.json';
 	providedIn: 'root',
 })
 export class ProductService {
-	
+
 	listProduct: {
         Id: any,
         ParentId: any,
@@ -14,10 +14,6 @@ export class ProductService {
         Code: any,
         Unit: any,
     }[] = product;
-
-	getProduct() {
-
-	}
 
 	constructor() { }
 }
