@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import product from '../../assets/data/product.json';
+import { ProductService } from '../product.service'
 
 @Component({
     selector: 'app-product',
@@ -9,16 +9,9 @@ import product from '../../assets/data/product.json';
 
 export class ProductComponent implements OnInit {
     
-    listProduct: {
-        Id: any,
-        ParentId: any,
-        Name: any,
-        ItemTypeName: any,
-        Code: any,
-        Unit: any,
-    }[] = product;
+    showProduct = this.productService.listProduct;
 
-    constructor() {
+    constructor(private productService: ProductService) {
 
     }
 

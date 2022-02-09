@@ -1,14 +1,22 @@
 import { Injectable, ViewChild } from '@angular/core';
-import { ProductComponent } from './product/product.component';
+import product from '../assets/data/product.json';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class ProductService {
-	@ViewChild(ProductComponent)
-	product = ProductComponent
+	
+	listProduct: {
+        Id: any,
+        ParentId: any,
+        Name: any,
+        ItemTypeName: any,
+        Code: any,
+        Unit: any,
+    }[] = product;
+
 	getProduct() {
-		return this.product;
+
 	}
 
 	constructor() { }

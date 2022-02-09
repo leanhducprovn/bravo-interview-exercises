@@ -34,7 +34,7 @@ export class AddComponent implements OnInit {
 
 	onSubmit() {
 		console.warn(this.addProduct.value);
-		console.log(this.productService.getProduct())
+		console.log(this.productService.listProduct)
 		this.addProduct.reset();
 	}
 
